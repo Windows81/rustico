@@ -6,6 +6,7 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
     let new_str = match ident_str.as_str() {
         "núcleo" => "core",
         "estd" | "estándar" => "std",
+        "colecciones" => "collections",
         "e8" => "i8",
         "e16" => "i16",
         "e32" => "i32",

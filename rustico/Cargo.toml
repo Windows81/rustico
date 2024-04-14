@@ -4,10 +4,10 @@ description = "Rust programming, in Spanish."
 readme = "../readme.md"
 license = "MIT"
 homepage = "https://github.com/UltiRequiem/rustico"
-keywords = ["spanish"]
+keywords = ["spanish", "translate", "translation", "latino"]
 authors = ["UltiRequiem"]
-categories = ["acessability"]
-version = "0.1.2"
+categories = ["accessibility"]
+version = "0.2.0"
 edition = "2018"
 
 [lib]

@@ -1,19 +1,17 @@
-# rustico
+# rústico
 
-![Para divertirme](https://raw.githubusercontent.com/UltiRequiem/rustico/e9e5c1c50f566f1946d9e506bb501b2e78cb551c/para_divertirme.png)
+![Residente diciendo "Esto lo hago pa' divertirme"](https://raw.githubusercontent.com/UltiRequiem/rustico/e9e5c1c50f566f1946d9e506bb501b2e78cb551c/para_divertirme.png)
 
-> [Doing it for the fun.](https://youtu.be/v3rOpmlpFsM)
+> [Doing it for fun.](https://youtu.be/v3rOpmlpFsM)
 
 Aren't you _cansado_ from writing Rust Programs in English? Do you like saying
 _"chales"_ a lot? Would you like to try something different, in an exotic and
 funny-sounding language?
 
-**rustico** (Spanish for Rust) is here to save your day, as it allows you to
+**rústico** (Spanish for Rust) is here to save your day, as it allows you to
 write Rust programs in Latam Spanish.
 
-You are from Costa Rica and don't feel at ease using only Spanish Words? Don't
-Worry! Rustico is fully compatible English-Rust, you can mix both at your
-convenience.
+You are from Costa Rica and don't feel at ease using only Spanish Words? Don't Worry! Rústico is fully compatible English-Rust, you can mix both at your convenience.
 
 ## instalación
 
@@ -23,18 +21,18 @@ cargo install rustico
 
 ## uso
 
-Here's an exmple of what can be achieved with Rustico.
+Here's an example of what can be achieved with Rustico.
 
 ```rust
 rustico::rustico! {
-    funcion principal() {
-        deja mutable x = 31;
+    función principal() {
+        sea mutable x: e32 = 31;
 
         machea x {
             42 => {
                 chales!("Like panic")
             }
-            _ => imprime!("Buenas!")
+            _ => imprimeln!("Buenas!")
         }
 
         para numero de 0..10 {

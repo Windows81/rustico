@@ -1,62 +1,62 @@
 rustico::rustico! {
-    usando std::collections::Diccionario;
+    usar estd::colecciones::Diccionario;
 
-    sobrecarga Hola {
-        funcion escribe(&yo, llave: Texto, valor: Texto);
-        funcion consigue(&yo, llave: Texto) -> Resultado<Opcion<&Texto>, Texto>;
+    rasgo Hola {
+        función escribe(&yo, llave: Cadena, valor: Cadena);
+        // `fn` alias sin tilde
+        funcion consigue(&mismo, llave: Cadena) -> Resultado<Opción<&Cadena>, Cadena>;
     }
 
-    statico mutable DICCIONARIO: Opcion<Diccionario<Texto, Texto>> = Ninguno;
+    estático mutable DICCIONARIO: Opcion<Diccionario<Cadena, Cadena>> = Ninguno;
 
     structura Concreto;
 
     implementa Hola para Concreto {
-        funcion escribe(&yo, llave: Texto, valor: Texto) {
-            deja dico = inseguro {
+        funcion escribe(&yo, llave: Cadena, valor: Cadena) {
+            sea dic = inseguro {
                 DICCIONARIO.obten_o_inserta_con(Defecto::defecto)
             };
-            dico.insérer(llave, valor);
+            dic.insertar(llave, valor);
         }
-        funcion consigue(&yo, llave: Texto) -> Resultado<Opcion<&Texto>, Texto> {
-            si deja Algunos(dico) = inseguro { DICCIONARIO.como_referencia() } {
-                Bien(dico.consigue(&llave))
+        funcion consigue(&yo, llave: Cadena) -> Resultado<Opcion<&Cadena>, Cadena> {
+            si deja Alguno(dic) = inseguro { DICCIONARIO.como_referencia() } {
+                Bien(dic.consigue(&llave))
             } sino {
-                Error("fetchez le dico".dentro_de())
+                Error("llave no existe en diccionario".dentro_de())
             }
         }
     }
 
-    publico(caja) funcion quizas(i: u32) -> Opcion<Resultado<u32, Texto>> {
+    púb(jaula) funcion quizas(i: n32) -> Opcion<Resultado<n32, Cadena>> {
         si i % 2 == 1 {
             si i == 42 {
-                Algunos(Error(Texto::desde("merde")))
+                Alguno(Error(Cadena::desde("caca")))
             } sino {
-                Algunos(Bien(33))
+                Alguno(Bien(33))
             }
         } sino {
             Ninguno
         }
     }
 
-    asyncrona funcion example() {
-    }
+    asinc función ejemplo() {}
 
-    asyncrona funcion example2() {
-        example().espera;
+    asínc funcion ejemplo2() {
+        ejemplo().espera;
     }
 
     funcion principal() {
-        deja mutable x = 31;
+        sea mutable x = 31;
 
         machea x {
             42 => {
-                imprime!("chales")
+                imprimeln!("chales")
             }
-            _ => imprime!("Buenas!")
+            _ => imprimeln!("Buenas!")
         }
 
         para i de 0..10 {
-            deja val = loopea {
+            sea val = bucle {
                 rompe i;
             };
 
@@ -64,7 +64,7 @@ rustico::rustico! {
                 x += 1;
             }
 
-            x = si deja Algunos(resultado) = quizas(i) {
+            x = si deja Alguno(resultado) = quizas(i) {
                 resultado.pelar()
             } sino {
                 12
@@ -73,9 +73,9 @@ rustico::rustico! {
 
     }
 
-    #[permite(codigo_inusado)]
+    #[permite(código_inalcanzable)]
     funcion secundario() {
-        chales!("oh non");
-        ups!("fetchez la vache");
+        chales!("ay no!");
+        ups!("cuando las vacas vuelen");
     }
 }

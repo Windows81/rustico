@@ -103,7 +103,7 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
         "usando" | "usar" => "use",
         "dentro_de" => "into",
         "enumerado" | "enumeración" => "enum",
-        "Rasgo" => "Trait"
+        "Rasgo" => "Trait",
         _ => &ident_str,
     };
 

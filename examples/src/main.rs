@@ -9,7 +9,7 @@ rustico::rustico! {
 
     estático mutable DICCIONARIO: Opcion<Diccionario<Cadena, Cadena>> = Ninguno;
 
-    structura Concreto;
+    estructura Concreto;
 
     implementa Hola para Concreto {
         funcion escribe(&yo, llave: Cadena, valor: Cadena) {

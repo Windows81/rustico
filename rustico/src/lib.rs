@@ -29,20 +29,20 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
         "como_cad" => "to_str",
         "Hilo" => "Thread",
         "hilo" => "thread",
-        "crear" => "spawn", // debería ser "aparecer"?
+        "crear" => "spawn",         // debería ser "aparecer"?
         "Diccionario" => "HashMap", // no hay traducción satisfactoria para "hash"
         "Conjunto" => "HashSet",
         "Defecto" => "Default",
         "defecto" => "default",
         "Errorsaso" => "Error", // errorsasasaso!!!
         "Opcion" | "Opción" => "Option",
-        "Alguno" => "Some", // Algo == !Nada
+        "Alguno" => "Some",  // Algo == !Nada
         "Ninguno" => "None", // Nada = Nothing
         "Resultado" => "Result",
         "Yo" | "Mismo" => "Self",
         "yo" | "mismo" => "self",
         "imprimeln" => "println", // línea
-        "imprime" => "print", // no hay línea
+        "imprime" => "print",     // no hay línea
         "rompe" | "romper" => "break",
         "proceso" => "process",
         "Comando" => "Command",
@@ -103,7 +103,7 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
         "usando" | "usar" => "use",
         "dentro_de" => "into",
         "enumerado" | "enumeración" => "enum",
-        "Rasgo" => "Trait"
+        "Rasgo" => "Trait",
         _ => &ident_str,
     };
 
